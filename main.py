@@ -24,7 +24,7 @@ async def start(client, message):
 
 
 @app.on_message(filters.text & filters.private)
-async def echo(client, message):
+async def get_folder_name(client, message):
     global folder_name
     folder_name = folder_name.join(message.text)
     await message.reply(f"Папка теперь '{folder_name}'")
